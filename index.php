@@ -211,7 +211,7 @@ $r1= substr(str_shuffle($used_symbols), 0, $length);
 
 $r2= substr(str_shuffle($used_symbols), 0, 8);
 
-$redirect=$r1.$r2;
+$r=$r1.$r2;
 
 
 
@@ -222,31 +222,6 @@ substr("Hello world",6,-2);
 ***** how to find duplicacy in sql
 
 select empid from table group by empid having count(empid) > 1
-
-
-
-
-Managing <DateTime-local> input type with max min and default value
-datetime-local input uses RFC 3339 format for input and output.
-User input of date and time can be collected by using this input type.
-We will develop sample codes to collect the data and how to set the default values along with data for max , min attributes.
-
-
-12-06-2018 19:30
- Source code is here .
-<input type='datetime-local' id='input_time' name='input_time' value='2018-06-12T19:30' min='2018-06-07T00:00' max='2018-06-14T00:00'>
-Adding Seconds
-By adding step=1 we can include seconds selection in our input. 
-12-06-2018 19:30:46
-<input type='datetime-local' id='input_time' name='input_time' value='2018-06-12T19:30:46' min='2018-06-07T00:00:56' max='2018-06-14T00:00:34' step=1>
-Creating the date and time object using datetime-local as input
-As we receive the input as POST ( or GET ) method, the PHP code part is here to create the date and time object.
-//$dt=$_POST['dt']; // Getting data from POST method of form
-$dt="2019-02-16T16:56:49";
-$date = DateTime::createFromFormat('Y-m-d\TH:i:s', $dt);
-if($date){$msg=' Date object is created using the input ';}
-else{$msg=' Unable to create date object ';}
-echo $msg;
 
 
 
