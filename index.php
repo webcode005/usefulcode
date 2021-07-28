@@ -219,6 +219,13 @@ substr("Hello world",6,-2);
 
 
 
+***** how to find duplicacy in sql
+
+select empid from table group by empid having count(empid) > 1
+
+
+
+
 Managing <DateTime-local> input type with max min and default value
 datetime-local input uses RFC 3339 format for input and output.
 User input of date and time can be collected by using this input type.
