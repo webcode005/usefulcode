@@ -238,6 +238,8 @@ select empid from table group by empid having count(empid) > 1
 
 SELECT * FROM `wp_blog` WHERE `post_type`='post' AND `post_status`='Publish' ORDER BY `ID` DESC
 
+### Add num
+$a+$b;
 
 CREATE TABLE `admins` (
   `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
