@@ -17,10 +17,7 @@ foreach($files as $file){
  }
 }
 
-   $query=$conn->query("DELETE FROM `wp_blog` WHERE ID='$id'");  
-   echo "<script>alert('Post Deleted');window.location='post.php'</script>";
 
- 
 
  #### SEO Freindly URL
 
@@ -148,8 +145,65 @@ else
 
 
 ?>   
+ 
+
+ ### add multiple checkbox,radio,option values
+
+   $cat_id=$_POST['cat_id'];
+
+     $checkbox1=$_POST['cat_id'];  
+      $cat_id="";  
+      foreach($checkbox1 as $chk1)  
+         {  
+            $cat_id .= $chk1.",";  
+         } 
 
 
+#### SEO Freindly Way 2
+
+$z="ABCavb%&*@#('--__  ";
+
+function clean($z) {
+   $string = str_replace(' ', '-', $z); // Replaces all spaces with hyphens.
+   $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+
+   return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
+}
+
+echo $g=strtolower(clean($z));
+
+
+##### How to generate a random, unique, alphanumeric string in PHP  
+
+$length = 10;
+$used_symbols = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+ 
+$r1= substr(str_shuffle($used_symbols), 0, $length);
+
+$r2= substr(str_shuffle($used_symbols), 0, 8);
+
+$r=$r1.$r2;
+
+
+
+substr("Hello world",6,-2);
+
+
+
+***** SQL *****
+
+### How to Delete Duplicate Rows in SQL?
+
+DELETE FROM  vegetables  WHERE  VEGETABLE_ID NOT IN (  SELECT  MIN(VEGETABLE_ID) FROM  vegetables  GROUP BY  
+VEGETABLE_NAME,  color );  
+
+
+
+### Delete record with popup
+   $query=$conn->query("DELETE FROM `wp_blog` WHERE ID='$id'");  
+   echo "<script>alert('Post Deleted');window.location='post.php'</script>";
+
+ 
 
 ###  Use Array to get product details and use these array where you want
 
@@ -176,70 +230,12 @@ $price_row=mysqli_fetch_assoc(mysqli_query($conn,"select tl_price.*,tl_product.t
 $price=$price_row['p_price'];
  $title=$price_row['title'];
 
- 
-
- ### add multiple checkbox,radio,option values
-
-   $cat_id=$_POST['cat_id'];
-
-     $checkbox1=$_POST['cat_id'];  
-      $cat_id="";  
-      foreach($checkbox1 as $chk1)  
-         {  
-            $cat_id .= $chk1.",";  
-         } 
-
-
-####
-$z="ABCavb%&*@#('--__  ";
-
-function clean($z) {
-   $string = str_replace(' ', '-', $z); // Replaces all spaces with hyphens.
-   $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
-
-   return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
-}
-
-echo $g=strtolower(clean($z));
-
-
-##### How to generate a random, unique, alphanumeric string in PHP  
-$length = 10;
-$used_symbols = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
- 
-$r1= substr(str_shuffle($used_symbols), 0, $length);
-
-$r2= substr(str_shuffle($used_symbols), 0, 8);
-
-$r=$r1.$r2;
-
-
-
-substr("Hello world",6,-2);
-
-
 
 ***** how to find duplicacy in sql
 
 select empid from table group by empid having count(empid) > 1
 
 
-
-1. add yt in ckeditor
-2. move all old post (Done)
-3. write ajax code (Done)
-
-5. ci5_crud & Laravel Crud (PHP Tech Life)
-6. use owl carousel for related product section
-7. fixed layout of course image according to devices
-8. Upload Project on Git (Partial Done)
-9. adobe xd & Photoshop
-10. Django (website)
-
-SELECT * FROM `wp_blog` WHERE `post_type`='post' AND `post_status`='Publish' ORDER BY `ID` DESC
-
-### Add num
-$a+$b;
 
 CREATE TABLE `admins` (
   `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -254,6 +250,21 @@ CREATE TABLE `posts` (
   `created_by` int(11) NOT NULL,
   CONSTRAINT `fk_created_by_posts` FOREIGN KEY (`created_by`) REFERENCES `admins` (`id`) ON UPDATE CASCADE ON DELETE CASCADE
 );
+
+
+
+
+1. add yt in ckeditor
+2. move all old post (Done)
+3. write ajax code (Done)
+
+5. ci5_crud & Laravel Crud (PHP Tech Life)
+6. use owl carousel for related product section
+7. fixed layout of course image according to devices
+8. Upload Project on Git (Partial Done)
+9. adobe xd & Photoshop
+10. Django (website)
+
 
 
 Let’s Start to send JSON data via POSt Request with PHP cURL:
