@@ -39,6 +39,21 @@ foreach($files as $file){
         }
 
 
+#### SEO Freindly Way 2
+
+$z="ABCavb%&*@#('--__  ";
+
+function clean($z) {
+   $string = str_replace(' ', '-', $z); // Replaces all spaces with hyphens.
+   $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
+
+   return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
+}
+
+echo $g=strtolower(clean($z));
+
+
+
 #### REST API
 
         <?php
@@ -159,18 +174,7 @@ else
          } 
 
 
-#### SEO Freindly Way 2
 
-$z="ABCavb%&*@#('--__  ";
-
-function clean($z) {
-   $string = str_replace(' ', '-', $z); // Replaces all spaces with hyphens.
-   $string = preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
-
-   return preg_replace('/-+/', '-', $string); // Replaces multiple hyphens with single one.
-}
-
-echo $g=strtolower(clean($z));
 
 
 ##### How to generate a random, unique, alphanumeric string in PHP  
@@ -194,12 +198,11 @@ substr("Hello world",6,-2);
 
 ### How to Delete Duplicate Rows in SQL?
 
-DELETE FROM  vegetables  WHERE  VEGETABLE_ID NOT IN (  SELECT  MIN(VEGETABLE_ID) FROM  vegetables  GROUP BY  
-VEGETABLE_NAME,  color );  
+DELETE FROM  vegetables  WHERE  VEGETABLE_ID NOT IN (  SELECT  MIN(VEGETABLE_ID) FROM  vegetables  GROUP BY  VEGETABLE_NAME,  color );  
 
 
 
-### Delete record with popup
+### Delete record with alertbox
    $query=$conn->query("DELETE FROM `wp_blog` WHERE ID='$id'");  
    echo "<script>alert('Post Deleted');window.location='post.php'</script>";
 
@@ -254,13 +257,11 @@ CREATE TABLE `posts` (
 
 
 
-1. add yt in ckeditor
-2. move all old post (Done)
-3. write ajax code (Done)
+
 
 5. ci5_crud & Laravel Crud (PHP Tech Life)
-6. use owl carousel for related product section
-7. fixed layout of course image according to devices
+
+
 8. Upload Project on Git (Partial Done)
 9. adobe xd & Photoshop
 10. Django (website)
@@ -280,3 +281,357 @@ Step-7: Finally curl_exec() function is used to execute the POST request api url
 
  index.php
          
+
+         
+         select tl_price.*,tl_product.title,tl_product.video from tl_price,tl_product where tl_product.detail_id=tl_price.prod_id AND tl_price.prod_id='38' AND tl_price.s_location='Kuwait' AND tl_price.type='Classroom' 
+
+
+
+
+select tl_price.*,tl_product.title,tl_product.video,short_description.product_id,short_description.pointer from tl_price,tl_product,short_description where tl_product.detail_id=tl_price.prod_id AND tl_price.prod_id='38' AND tl_price.s_location='Kuwait' AND tl_price.type='Classroom' AND short_description.product_id='38'
+
+
+
+
+pcc=$conn->query("select * from category where url_key='$purl'");
+$pccrow=$pcc->fetch_assoc();
+  $catid=$pccrow['id'];
+$pscc=$conn->query("select * from sub_category where url_key='$surl'");
+$pscrow=$pscc->fetch_assoc();
+   $scatid=$pscrow['id'];
+
+
+?>
+ <?php 
+            
+            $a=$conn->query("SELECT * FROM `product` WHERE `category_id`='$catid' AND `sub_category_id`='$scatid'");
+
+
+     SELECT category.*,sub_category.*,product.* FROM category,sub_category,product WHERE product.category_id=category.id AND product.sub_category_id=sub_category.id  AND  category.url_key='partner' AND sub_category.url_key='why-partner-with-us'  
+
+<?php 
+
+        // Declare two dates
+        $start_date = strtotime("12:30");
+        $end_date = strtotime("1:30");
+          
+        // Get the difference and divide into 
+        // total no. seconds 60/60/24 to get 
+        // number of days
+        //echo "Difference between two dates: ". ($end_date - $start_date)/60/60;
+    
+    ?>
+
+                
+
+
+***** Print Date,Days of any month in a year  *****
+
+### Step1: 
+date_default_timezone_set('Asia/Kolkata');
+$month = date('m');
+$year = date('Y');
+$cur_date = date('Y-m-d');
+
+$d = $day_count =cal_days_in_month(CAL_GREGORIAN,$month,$year);
+
+### Step2:
+
+    <?php
+        $day = 1;
+        while($d){ ?>
+
+                    <th><?php echo $dated = ($day++.' '.(date("M Y")));echo '<br>('.$day_name = date('D', strtotime($dated)).')';?></th>
+                        
+    <?php  $d--; } ?> 
+
+
+
+
+
+boozetJvQR
+Pssw0rd@5211
+
+
+
+
+**** how to show only 50 words in php *****
+
+$in="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi purus nisl, blandit et eros id, pharetra tristique massa. Nulla facilisi. Curabitur lobortis urna eu neque congue, id cursus purus placerat. In malesuada est tellus. Nunc ac ullamcorper nibh. Maecenas lacus dolor, volutpat sed augue sit amet, maximus condimentum sem. Aenean nec egestas orci. Sed fringilla augue eget arcu consectetur interdum. Praesent sed dignissim risus. Ut lobortis dolor nec sagittis dapibus. Donec eget dolor vitae elit porta commodo in et magna. Nunc sapien nisl, euismod ac ex vitae, sodales feugiat lorem. Phasellus condimentum, nulla cursus porta mollis, nulla urna dapibus velit, vitae sagittis arcu risus vitae orci. Praesent leo nisi, laoreet id mauris nec, hendrerit feugiat lacus. Praesent vulputate lorem vel lobortis aliquam.";
+
+Method:1
+<?= $out = strlen($in) > 50 ? substr($in,0,50)."..." : $in;?>
+
+Method:2
+$result = substr($in, 0, 50); //first 50 chars "Pellentesque"
+
+
+
+##### How to Get Checked Checkboxes Value using jQuery
+
+ <input type="checkbox" value="1"  onclick="myFunction()"  id="cwebsite" class="form-control" name="cwebsite" >
+ <img src="" id="cwimg">
+ <script>
+
+function myFunction() {
+  var checkBox = document.getElementById("cwebsite");
+ 
+  var text = document.getElementById("cwimg");
+  
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+
+ </script>
+
+Murari!@12
+
+ ***** PHP *****
+1. OOPS Concept
+2. REST API
+3. ANY CMS
+4. ANY Framework
+5. Core PHP (ARRAY & STRINGS)
+6. LAMP
+7. OpenCart
+
+Technical suneja
+
+
+
+**** How to check Error in PHP file inside folder *****
+<?php 
+
+exex("php -1 about.php", $output, $return);
+
+
+if($return==0)
+{
+   include('about.php') ;
+}
+else
+
+{
+
+    if(!isset($output[2]))
+    {
+        echo $output[0];
+    }
+    else
+    {
+        echo $output[2];
+    }
+    
+}
+
+
+
+?>
+
+
+
+#### undefined offset: 0 laravel
+
+use count method 
+and check if count > 0 then fetch data from database or else pass blank value
+
+
+
+
+
+
+##### 9 Useful MySQL Date Related Query
+
+Get Last one week,one month ,one year records from Database Date Field
+Get Last one week records
+
+SELECT * FROM table WHERE Date BETWEEN (NOW() - INTERVAL 7 DAY) AND NOW()
+Get Last one month records
+
+SELECT * FROM table WHERE YEAR(date_created) = YEAR(CURRENT_DATE - INTERVAL 1 MONTH) AND MONTH(date_created) = MONTH(CURRENT_DATE - INTERVAL 1 MONTH)
+Get Last 30 days records
+
+SELECT * FROM table WHERE Date BETWEEN (NOW() - INTERVAL 1 MONTH) AND NOW()
+Get Last one year records
+
+SELECT * FROM table WHERE Date BETWEEN (NOW() - INTERVAL 1 YEAR) AND NOW()
+Select records from today, this week, this month, this year from Database Date Field
+Select records from today
+
+$processdate = DATE('Y-m-d');
+SELECT SUM(amount) AS totalfundreceive FROM `table` WHERE DATE(`processdate`)='$processdate'
+Select records from this week
+
+SELECT * FROM table WHERE processdate > DATE_SUB(NOW(), INTERVAL 1 WEEK);
+Select records from this month/ Current month
+
+SELECT * FROM table WHERE YEAR(date) = YEAR(CURRENT_DATE()) AND MONTH(date) = MONTH(CURRENT_DATE());
+Select records from this year/ current year
+
+SELECT * FROM TABLE WHERE YEAR(date) = YEAR(CURDATE()); 
+Records of two date ranges
+
+SELECT * FROM TABLE WHERE date between '2019-01-07' AND '2019-01-15'
+
+
+#### Curl GET And POST Method Calls – PHP Example
+
+curl is an open source command line tool and library for transferring data with URL.
+curl is a powerful system to transfer data to many protocals. it is a good way to send data between websites.
+cURL is unrestricted so it can be make simple HTTP Request ,also make complex FTP upload with an authentication, also can make HTTPS requests.
+
+Steps to make CURL calls :
+Step1:
+We will initialize the curl by calling curl_init() function. After this initation we can call curl resources functions.
+
+Step2:
+There are many setting that we can use for different works with curl_setopt() function.
+
+Ex : bool curl_setopt ( $curl_object , $option , mixed $value );
+
+First parameter $curl_object
+A cURL handle returned by curl_init().
+
+Second parameter is setting $option
+The CURLOPT_XXX option to set.
+
+Third  parameter is $value
+The value to be set on option. ex. array or any value
+
+Below are the some main settings we can use inside curl_setopt() function
+A. CURLOPT_RETURNTRANSFER – Set it TRUE to return the response as a string, if not set this parameter then response will outputting on page then we can use file_get_contents(‘url’) to get response. 
+Ex. curl_setopt($curl_object, CURLOPT_RETURNTRANSFER, true);
+
+B. CURLOPT_CONNECTTIMEOUT – Number of seconds to try to connect 
+Ex. curl_setopt($curl_object, CURLOPT_CONNECTTIMEOUT, 60);
+
+C. CURLOPT_URL – URL to sent curl request.
+Ex. curl_setopt($curl_object, CURLOPT_URL, “http://www.curlexample.com”);
+
+D. CURLOPT_POST – Set when sending curl post request. 
+Ex. curl_setopt($curl_object, CURLOPT_POST, true);
+
+E. CURLOPT_POSTFIELDS – Array of data sent in post.
+Ex. curl_setopt($curl_object, CURLOPT_POST, array(“querystring1” => “parameter1”, “querystring2” => “parameter1”)); F.CURLOPT_TIMEOUT – Number of seconds cURL will take to execute.
+Ex. curl_setopt($curl_object, CURLOPT_TIMEOUT, 60);
+
+G. CURLOPT_FRESH_CONNECT – Each curl call be refresh. 
+Ex. curl_setopt($curl_object, CURLOPT_TIMEOUT, true);
+
+H. CURLOPT_USERPWD – Some pages/api required authentication to access, for these cases we will use this setting. 
+Ex. curl_setopt($crl, CURLOPT_USERPWD, “Username:Password”);
+
+Step3:
+curl_exec() call will execute for curl settings and return response.
+
+Step4:
+curl_close() will call to free all curl resources.
+
+ 
+
+==> MAKE GET METHOD REQUEST
+Making a GET method call by curl.
+
+<?php
+                  $url = 'https://curlbasics.com?curl=basic&method=get';
+                  $crl = curl_init();
+                  
+                  curl_setopt($crl, CURLOPT_URL, $url);
+                  curl_setopt($crl, CURLOPT_FRESH_CONNECT, true);
+                  curl_setopt($crl, CURLOPT_RETURNTRANSFER, true);
+                  $response = curl_exec($crl);
+                  
+                  if(!response){
+                      die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
+                  }
+                  curl_close($crl);
+?>
+==> MAKE POST METHOD REQUEST
+Making a POST method call by curl.
+
+<?php 
+  
+    $data = array(
+          'query1' => 'parameter1 ',
+          'text' => 'Hi, Message from android example'
+       );
+        $url = "https://curl-post-call.com";
+       
+       $ch = curl_init ($url);
+       curl_setopt ($ch, CURLOPT_POST, true);
+       curl_setopt ($ch, CURLOPT_POSTFIELDS, $data);
+       curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
+       $response = curl_exec ($ch); 
+       
+       if(!response){
+               die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
+           }
+       curl_close($crl);
+               
+  ?>        
+ 
+
+==> MAKE POST METHOD REQUEST WHERE AUTHENTICATION REQUIRED
+Making a POST method call by curl.
+
+<?php 
+  
+           $AUTH_USERNAME = "Username";
+           $AUTH_PASSWORD = "Password";
+           
+           $url = 'https://authenticated-curl-call.com/';
+           $data = array("src" => "source",  "text" => "test curl request");
+           
+           $ch=curl_init($url);
+           curl_setopt($ch, CURLOPT_POST, true);
+           curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+           curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
+           
+           curl_setopt($ch, CURLOPT_USERPWD, $AUTH_USERNAME . ":" . $AUTH_PASSWORD);
+           
+           $response = curl_exec( $ch );
+           if(!response){
+               die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
+           }
+           curl_close($ch);
+               
+  ?>    
+      
+ 
+
+==> MAKE POST METHOD REQUEST WHERE AUTHENTICATION REQUIRED POST REQUEST AS JSON
+Making a POST method json call by curl.
+
+<?php 
+   
+            $AUTH_USERNAME = "Username";
+            $AUTH_PASSWORD = "Password";
+            
+            $url = 'https://curl-json-call.com/';
+            $data = array("src" => "source",  "text" => "test curl request");
+            
+            $data_string = json_encode($data);
+            
+            $ch=curl_init($url);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+            curl_setopt($ch, CURLOPT_FRESH_CONNECT, true);
+            curl_setopt($ch, CURLOPT_USERPWD, $AUTH_USERNAME . ":" . $AUTH_PASSWORD);
+            
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+                        
+            $response = curl_exec( $ch );
+            if(!response){
+                die('Error: "' . curl_error($ch) . '" - Code: ' . curl_errno($ch));
+            }
+            
+            curl_close($ch);
+                
+   ?>         
+       
+ 
+
+ 
