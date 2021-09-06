@@ -635,3 +635,30 @@ Making a POST method json call by curl.
  
 
  
+ <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=6130cd14eae16400120a4fcb&product=inline-share-buttons" async="async"></script>
+
+
+
+ #### Share Social URL
+
+ Facebook:
+Facebook social share URL:
+
+https://www.facebook.com/sharer.php?u=[post-url]
+Twitter:
+Twitter social share URL:
+
+https://twitter.com/share?url=[post-url]&text=[post-title]&via=[via]&hashtags=[hashtags]
+Google+:
+Google+ social share URL:
+
+https://plus.google.com/share?url=[post-url]
+Pinterest:
+Pinterest social share URL:
+
+https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
+
+LinkedIn:
+LinkedIn social share URL:
+
+https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
