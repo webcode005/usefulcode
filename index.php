@@ -645,14 +645,17 @@ Making a POST method json call by curl.
 Facebook social share URL:
 
 https://www.facebook.com/sharer.php?u=[post-url]
+
 Twitter:
 Twitter social share URL:
 
 https://twitter.com/share?url=[post-url]&text=[post-title]&via=[via]&hashtags=[hashtags]
+
 Google+:
 Google+ social share URL:
 
 https://plus.google.com/share?url=[post-url]
+
 Pinterest:
 Pinterest social share URL:
 
@@ -662,3 +665,14 @@ LinkedIn:
 LinkedIn social share URL:
 
 https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
+
+Whatsapp
+Whatsapp social share URL:
+
+https://wa.me/whatsappphonenumber/?text=urlencodedtext
+
+Instagram:
+
+// 
+
+Instagram currently doesn’t allow you to share a photo or video from another website – you can only upload photos/videos directly from your mobile device. Since there is no sharing mechanism, there is no way for us to include a button that will share your content to Instagram.
