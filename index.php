@@ -760,3 +760,70 @@ Instagram currently doesn’t allow you to share a photo or video from another w
 
 
    <a aria-label="share to snapchat" rel="noreferrer nofollow" data-from-plus="true" data-uuid="MSXtEY0pkO" target="" data-provider="snapchat" data-action="share" onclick="document.querySelector('.gs-close').click();" href="javascript:void(0);" share-url="" class="gs-tracking gs-snc snap-done" data-url="https://www.credential.net/36d5c516-efa0-46e6-a351-466a3f08434a" data-url-id="jt9X" data-share-url="https://api.at.getsocial.io/n/iP0mVDUdBt?u=https%3A%2F%2Fwww.credential.net%2F36d5c516-efa0-46e6-a351-466a3f08434a&amp;s=Accredible&amp;t=Digital%20Marketing%20%E2%80%A2%20Basant%20Mallick%20%E2%80%A2%20MindCypress"><span class="fa fa-Snapchat"></span></a></br></br>
+
+
+
+
+***** Show Website in iframe *****
+
+
+<iframe class="full-screen-preview__frame" src="https://thepixelcurve.com/html/edubin/" name="preview-frame" frameborder="0" noresize="noresize" data-view="fullScreenPreview" allow="geolocation 'self'; autoplay 'self'">
+</iframe>
+
+
+
+### How to get difference between two dates
+
+$date1 = strtotime($value['punch_in']); 
+$date2 = strtotime($value['punch_out']); 
+
+if(!empty($date1) && !empty($date2)) {
+  
+// Formulate the Difference between two dates
+ $diff = abs($date2 - $date1); 
+  
+  
+// To get the year divide the resultant date into
+// total seconds in a year (365*60*60*24)
+ $years = floor($diff / (365*60*60*24)); 
+  
+  
+// To get the month, subtract it with years and
+// divide the resultant date into
+// total seconds in a month (30*60*60*24)
+$months = floor(($diff - $years * 365*60*60*24)
+                               / (30*60*60*24)); 
+  
+  
+// To get the day, subtract it with years and 
+// months and divide the resultant date into
+// total seconds in a days (60*60*24)
+$days = floor(($diff - $years * 365*60*60*24 - 
+             $months*30*60*60*24)/ (60*60*24));
+  
+  
+// To get the hour, subtract it with years, 
+// months & seconds and divide the resultant
+// date into total seconds in a hours (60*60)
+ $hours = floor(($diff - $years * 365*60*60*24 
+       - $months*30*60*60*24 - $days*60*60*24)
+                                   / (60*60)); 
+  
+  
+// To get the minutes, subtract it with years,
+// months, seconds and hours and divide the 
+// resultant date into total seconds i.e. 60
+$minutes = floor(($diff - $years * 365*60*60*24 
+         - $months*30*60*60*24 - $days*60*60*24 
+                          - $hours*60*60)/ 60); 
+  
+  
+// To get the minutes, subtract it with years,
+// months, seconds, hours and minutes 
+$seconds = floor(($diff - $years * 365*60*60*24 
+         - $months*30*60*60*24 - $days*60*60*24
+                - $hours*60*60 - $minutes*60)); 
+  
+// Print the result
+printf( "%d hours, %d minutes, %d seconds", $hours, $minutes, $seconds); 
+
